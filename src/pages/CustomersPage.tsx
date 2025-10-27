@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select'
 import { useToast } from '../hooks/use-toast'
-import { Plus, Search, Filter, Edit, Trash2, Eye, DollarSign, MessageSquare, UserPlus } from 'lucide-react'
+import { Plus, Search, Filter, Edit, Trash2, Eye, DollarSign, MessageSquare } from 'lucide-react'
 
 interface Customer {
 	id: number

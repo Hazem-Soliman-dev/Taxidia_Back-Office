@@ -57,11 +57,6 @@ export function SettingsPage() {
 	const [pushEnabled, setPushEnabled] = useState(true)
 	const [notificationFrequency, setNotificationFrequency] = useState('realtime')
 
-	// API Keys
-	const [apiKeys] = useState([
-		{ id: 1, name: 'Production API', key: 'sk_live_***************', created: '2024-01-15' },
-		{ id: 2, name: 'Development API', key: 'sk_test_***************', created: '2024-02-20' },
-	])
 
 	// Active Sessions
 	const [sessions] = useState([
@@ -119,20 +114,6 @@ export function SettingsPage() {
 		})
 	}
 
-	const handleGenerateApiKey = () => {
-		toast({
-			title: "API Key Generated",
-			description: "A new API key has been created",
-		})
-	}
-
-	const handleRevokeApiKey = (keyName: string) => {
-		toast({
-			title: "API Key Revoked",
-			description: `${keyName} has been revoked`,
-			variant: "destructive",
-		})
-	}
 
 	const handleLogoutSession = (device: string) => {
 		toast({
