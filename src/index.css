@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Roboto+Slab:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Responsive utilities */
+@import './styles/responsive.css';
+
+@layer base {
+  :root {
+    /* Custom Global Colors */
+    --e-global-color-primary: #E90B35;
+    --e-global-color-secondary: #11161F;
+    --e-global-color-text: #000000;
+    --e-global-color-accent: #161616;
+    --e-global-color-light-bg: #F5F5F5;
+    --e-global-color-light-border: #E2DFEB;
+    --e-global-color-dark-bg: #11161F;
+    
+    /* Light Mode Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%; /* Pure black #000000 */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%; /* Pure black */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%; /* Pure black */
+    --primary: 348 89% 48%; /* #E90B35 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%; /* #F5F5F5 */
+    --secondary-foreground: 0 0% 0%; /* Pure black */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%; /* Slightly lighter gray for muted text */
+    --accent: 0 0% 9%; /* #161616 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%; /* #E2DFEB */
+    --input: 0 0% 90%;
+    --ring: 348 89% 48%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 220 25% 7%; /* #11161F */
+    --foreground: 0 0% 100%; /* Pure white */
+    --card: 220 25% 7%;
+    --card-foreground: 0 0% 100%; /* Pure white */
+    --popover: 220 25% 7%;
+    --popover-foreground: 0 0% 100%; /* Pure white */
+    --primary: 348 89% 48%; /* #E90B35 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 9%; /* #161616 */
+    --secondary-foreground: 0 0% 100%; /* Pure white */
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 70%; /* Lighter gray for better readability */
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 9%;
+    --input: 0 0% 9%;
+    --ring: 348 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  
+  /* Prevent content overflow */
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
